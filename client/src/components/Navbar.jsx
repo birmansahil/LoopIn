@@ -1,21 +1,31 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar layout">
       <div className="navbar-left">
         <a href="/" className="brand">
-          <div className="logo">App</div>
+          LoopIn
         </a>
-        <div className="search">
-          <input type="search" placeholder="Search discussions..." />
-        </div>
+      </div>
+
+      <div className="search-container">
+        <input
+          className="search-input"
+          type="search"
+          placeholder="Search discussions..."
+        />
+        <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
       </div>
 
       <div className="navbar-right">
-        <a href="#login">Log in</a>
-        <a href="#register" className="btn-outline">
-          Create account
+        <a className="link" href="#register">
+          Sign up
+        </a>
+        <a className="link" href="#login">
+          Log in
         </a>
       </div>
     </nav>
