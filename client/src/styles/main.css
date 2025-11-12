@@ -1,6 +1,6 @@
 /* Theme */
 :root {
-  --bg: #f6f7f9;
+  --bg: #f6f6f6;
   --card: #fff;
   --muted: #6b7280;
   --accent: #5b7cff;
@@ -29,12 +29,13 @@ body {
 /* Layout */
 .layout {
   width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 220px 1fr 320px;
   gap: 20px;
-  max-width: 1200px;
 }
+
 .left-col,
 .center-col,
 .right-col {
@@ -45,7 +46,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #ddd;
+  background-color: #fff;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -110,26 +111,22 @@ header {
   text-decoration: underline;
 }
 
+/* Main */
+main.layout {
+  margin-top: 25px;
+}
+
 /* Left sidebar */
-.left-sidebar {
-  background: white;
-  border: 1px solid #eaeaea;
+.sidebar-list {
+  padding: 15px;
+  list-style-type: none;
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
-  padding: 16px;
-  position: sticky;
-  top: 72px;
+  background-color: #fff;
 }
-.left-sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.left-sidebar li {
+
+.sidebar-list-item {
   margin-bottom: 12px;
-}
-.left-sidebar a {
-  color: #111;
-  text-decoration: none;
 }
 
 /* Center feed */
@@ -185,38 +182,36 @@ header {
 }
 
 /* Right sidebar */
-.right-sidebar {
-  position: sticky;
-  top: 72px;
-}
-.create-btn {
-  width: 100%;
-  padding: 12px;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
 .trending {
-  margin-top: 18px;
-  background: white;
-  border: 1px solid #eaeaea;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
-  padding: 12px;
+  background-color: #fff;
 }
+
 .trending h4 {
-  margin: 0 0 8px;
+  margin-bottom: 8px;
 }
+
 .trending ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style-type: none;
 }
+
 .trending li {
   margin-bottom: 8px;
   color: var(--muted);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--accent);
 }
 
 /* Modal */

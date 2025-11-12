@@ -13,19 +13,11 @@ const App = () => {
         <Navbar />
       </header>
 
-      <div className="layout">
-        <aside className="left-col">
-          <LeftSidebar />
-        </aside>
-
-        <main className="center-col">
-          <MainFeed />
-        </main>
-
-        <aside className="right-col">
-          <RightSidebar onCreate={() => setShowForm(true)} />
-        </aside>
-      </div>
+      <main className="layout">
+        <LeftSidebar />
+        <MainFeed />
+        <RightSidebar onCreate={() => setShowForm(true)} />
+      </main>
 
       {showForm && (
         <div className="modal-backdrop" onClick={() => setShowForm(false)}>
